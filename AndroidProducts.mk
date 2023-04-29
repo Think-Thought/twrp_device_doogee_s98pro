@@ -14,5 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_S98Pro.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_S98Pro.mk
+	
+COMMON_LUNCH_CHOICES := twrp_S98Pro-eng

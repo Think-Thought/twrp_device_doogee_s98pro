@@ -1,7 +1,3 @@
-# hard
-ro.mediatek.platform=MT6781
-ro.hardware=mt6781
-
 # USB
 ro.sys.usb.storage.type=mtp
 ro.sys.usb.mtp.whql.enable=0
@@ -22,17 +18,6 @@ ro.vendor.mtk_microtrust_tee_support=1
 
 # FBE
 fbe.metadata.wrappedkey=true
-
-# Gatekeeper
-ro.hardware.gatekeeper=beanpod
-
-# Kmsetkey
-ro.hardware.kmsetkey=beanpod
-
-# debug
-#ro.adb.secure=0
-#ro.debuggable=1
-#ro.force.debuggable=1
 
 ro.vendor.mtk_f2fs_enable=1
 ro.vendor.mtk_emmc_support=1
