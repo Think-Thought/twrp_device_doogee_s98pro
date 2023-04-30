@@ -1,15 +1,14 @@
 #
-# Copyright (C) 2022 The Android Open Source Project
-# Copyright (C) 2022 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2023 The Android Open Source Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 # Configure base.mk
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Configure full base
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
