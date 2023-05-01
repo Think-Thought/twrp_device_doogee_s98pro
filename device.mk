@@ -5,9 +5,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# V A/B
-ENABLE_VIRTUAL_AB := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+# API
+PRODUCT_SHIPPING_API_LEVEL := 31
+
+# Dynamic
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -48,12 +50,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Dynamic
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 31
-
 # Boot Control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl.recovery \
@@ -71,8 +67,3 @@ PRODUCT_PACKAGES += \
 # Health Hal
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery	
-	
-# Fastbootd stuff
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd

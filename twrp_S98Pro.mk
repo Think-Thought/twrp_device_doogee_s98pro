@@ -7,9 +7,6 @@
 # Configure base.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Configure full base
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
@@ -24,3 +21,7 @@ PRODUCT_NAME := twrp_S98Pro
 PRODUCT_BRAND := DOOGEE
 PRODUCT_MODEL := S98Pro
 PRODUCT_MANUFACTURER := doogee
+
+# V A/B
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
